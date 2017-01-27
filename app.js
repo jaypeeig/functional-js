@@ -22,4 +22,15 @@ var newkeys = keys.filter(function(key){
     return number * 2;
 });
 
-console.log(newkeys); 
+/*understanding reduce function*/
+/*second param is the starting value*/
+/*returns one val*/
+
+var totalkeys = keys.map(function(number){
+    return number * 2;
+}).reduce(function(total, number){
+    console.log(total + " + " + number);
+    return total + number;
+}, 0);
+
+console.log(totalkeys); 
